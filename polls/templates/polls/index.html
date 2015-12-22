@@ -1,9 +1,11 @@
 {% load staticfiles %}
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-3.3.4-dist/css/bootstrap.min.css' %}" />
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
 
-{% if latest_question_list %}
+<!-- {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
         <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
@@ -11,4 +13,194 @@
     </ul>
 {% else %}
     <p>No polls are available.</p>
-{% endif %}
+{% endif %} -->
+
+<!-- {% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
+ -->
+
+<body>
+<h2> My Sticky Buns </h2>
+<button type="button" class="btn btn-primary">New</button>
+
+
+  {% for post in posts %}
+
+  <ul>
+  <li>
+      
+    <a href="#">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.text|linebreaks }}</p>
+      <p>published: {{ post.published_date }}</p>
+    </a>
+     {% endfor %}
+  </li>
+<!--   <li>
+    <a href="#">
+      <h2>Title #2</h2>
+      <p>Text Content #2</p>
+    </a>
+  </li> -->
+</ul>
+
+ 
+<!-- <form class="form-horizontal">
+<fieldset>
+ -->
+<!-- Form Name -->
+<!-- <legend>My One-Pager</legend>
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"><h3>Company</h3></div>
+</div> -->
+<!-- Text input-->
+<!-- <div class="form-group">
+  
+  <label class="col-md-4 control-label" for="Company Name">Company Name</label>  
+  <div class="col-md-4">
+
+  <input id="Company Name" name="Company Name" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div> -->
+
+<!-- Text input-->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="companyURL">Company URL</label>  
+  <div class="col-md-4">
+  <input id="companyURL" name="companyURL" type="text" placeholder="" class="form-control input-md">
+    
+  </div>
+</div> -->
+
+<!-- Text input-->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="location">Location</label>  
+  <div class="col-md-4">
+  <input id="location" name="location" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div> -->
+
+<!-- Textarea -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="textarea">Briefly describe your idea (in 3 sentences or less). </label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="textarea" name="textarea"></textarea>
+  </div>
+</div> -->
+
+<!-- Textarea -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="motivation">Why did you pick this idea to work on? How have you validated or plan to validate your idea?</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="motivation" name="motivation"></textarea>
+  </div>
+</div> -->
+
+<!-- Select Basic -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="progress">Which of the following best describes your progress? </label>
+  <div class="col-md-4">
+    <select id="progress" name="progress" class="form-control">
+      <option value="0"></option>
+      <option value="1">Sketches/mockups</option>
+      <option value="2">Prototype</option>
+      <option value="3">Private Beta</option>
+      <option value="4">Public beta</option>
+      <option value="5">Taking pre-orders</option>
+      <option value="6">Launched</option>
+    </select>
+  </div>
+</div>
+ -->
+<!-- Textarea -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="competitors">Who are your competitors and how is your idea different?</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="competitors" name="competitors"></textarea>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"><h3>Founders</h3></div>
+</div> -->
+<!-- Textarea -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="founders">Name of Founder(s), LinkedIns</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="founders" name="founders">eg. Mark Zuck: https://www.linkedin.com/in/markzuck</textarea>
+  </div>
+</div> -->
+
+<!-- Text input-->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="email">Main Contact Email Address</label>  
+  <div class="col-md-4">
+  <input id="email" name="email" type="text" placeholder="" class="form-control input-md" required="">
+    
+  </div>
+</div> -->
+
+<!-- Textarea -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="founderStory">Founders' Story (how you met, projects you have worked on together in the past)</label>
+  <div class="col-md-4">                     
+    <textarea class="form-control" id="founderStory" name="founderStory"></textarea>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4"><h3>Info we want to know</h3></div>
+</div> -->
+
+<!-- Multiple Checkboxes -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="checkboxes">VCs you would like to apply to</label>
+  <div class="col-md-4">
+  <div class="checkbox">
+    <label for="checkboxes-0">
+      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1">
+      Accel
+    </label>
+	</div>
+  <div class="checkbox">
+    <label for="checkboxes-1">
+      <input type="checkbox" name="checkboxes" id="checkboxes-1" value="2">
+      Rothenberg
+    </label>
+	</div>
+  </div>
+</div> -->
+<!-- Button -->
+<!-- <div class="form-group">
+  <label class="col-md-4 control-label" for="submit"></label>
+  <div class="col-md-4">
+    <button id="submit" name="singlebutton" class="btn btn-primary">Submit</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+
+
+
+
+
+
+ -->
+
+
+
+</body>
+
+

@@ -1,0 +1,24 @@
+
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap-3.3.4-dist/css/bootstrap.min.css' %}" />
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
+
+<body>
+
+<h2> My Sticky Buns </h2>
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#Modal">
+  New
+</button> -->
+
+<a class="btn btn-primary btn-lg" href="/polls/post/new" role="button">New</a>
+
+
+{% block post %}
+{% endblock %}
+
+</body>
+
+

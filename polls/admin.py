@@ -1,7 +1,11 @@
 from django.contrib import admin
 
 # Register your models here.
+from .models import Title, Blog, Author, Entry, Post
 from .models import Question, Choice
+
+
+admin.site.register(Post)
 
 class ChoiceInline(admin.StackedInline):
     model = Choice

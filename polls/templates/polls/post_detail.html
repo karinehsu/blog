@@ -1,0 +1,16 @@
+{% extends 'polls/base.html' %}
+
+
+
+{% block post %}
+    <div class="post">
+        {% if post.published_date %}
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        {% endif %}
+<!-- should be able to add post_edit link -->
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endblock %}

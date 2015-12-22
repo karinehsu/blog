@@ -1,0 +1,21 @@
+{% extends 'polls/base.html' %}
+
+<h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+{% block post %}
+  {% for post in posts %}
+
+    <ul>
+      <li>
+          
+        <a href="#">
+          <h2>{{ post.title }}</h2>
+          <p>{{ post.text|linebreaks }}</p>
+          <p>published: {{ post.published_date }}</p>
+        </a>
+         {% endfor %}
+      </li>
+
+    </ul>
+
+{% endblock %}
+
